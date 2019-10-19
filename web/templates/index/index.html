@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旧物</title>
+    <style>
+        #body{
+            background-color: #f2f2f2;
+        }
+
+        /* 标题头 */
+        #head_column{
+            height: 70px;
+            background-color: #fdfffd;
+            top: 0;
+            box-shadow: 2px 2px 3px #c7c7c7;
+            border-radius: 3px;
+            position: fixed;
+            width: 100%;
+        }
+
+        @font-face {
+            font-family: Wyue-GutiFangsong-NC;
+            src: url("{% static "Wyue-GutiFangsong-NC.otf" %}");
+            }
+
+        #head_title{
+            color: slategrey;
+            top: 50px;
+            padding-left: 50px;
+            padding-top: 20px;
+            font-size: 25px;
+            font-family: "Wyue-GutiFangsong-NC";
+        }
+
+        /* 主页部分 */
+
+        #main{
+            margin-left: 145px;
+            margin-right: 145px;
+            margin-top: 70px;
+            background-color: #fdfffd;
+        }
+
+        /* 主页分栏的标题 */
+
+        .stuff_title{
+            padding-top: 12px;
+            margin-left: 5%;
+            color: slategrey;
+            font-family: Wyue-GutiFangsong-NC;
+
+        }
+
+
+        .stuff_img_column{
+            width: 99%;
+        }
+
+        .stuff_img_list{
+            display: flex;  /* 图片排列的真正奥义 */
+            flex-direction: row;
+            flex-wrap: wrap;
+            list-style: none
+        }
+
+        .stuff_img_list li{
+            padding-top: 20px;
+            padding-left: 5px;
+            padding-bottom: 20px;
+            padding-right: 5px;
+        }
+
+        /* 动画 */
+        .stuff_img_list li:hover{
+            box-shadow: 2px 2px 3px #c7c7c7;
+            background-color: #f2f2f2;
+        }
+
+        .stuff_img_list li img{
+            width: 245px;
+        }
+
+        .stuff_info{
+            list-style: none;
+            color: darkgray;
+            font-size: small;
+            text-align: center;
+        }
+
+        .stuff_info div{
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        .stuff_info div p{
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="body">
+    <div id="head_column">
+        <div id="head_title">{{ the_title }}</div>
+    </div>
+
+    <div id="main">
+        <div id="my_sales" class="stuff_title">
+            <div><p>我的货品</p></div>
+        </div>
+        <div class="stuff_img_column">
+            <ul class="stuff_img_list">
+                {% for i in columns %}
+                <li>
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420918401&di=06dcc7d54c12e37570a38080164c57b7&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170524%2F6d2d409f4f514bbea71a004595d25309_th.jpg">
+                <div class="stuff_info">
+                    <div class="stuff_name"><p>今天天气真的好</p></div>
+                    <div class="stuff_price"><p>100¥</p></div>
+                    <div class="stuff_brand"><p>无数的时间</p></div>
+                </div>
+                </li>
+                {% endfor %}
+                {%  for i in columns1 %}
+                <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420997900&di=4a159c4404e38616bec4ed43c01a2863&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170809%2F5054-fyitapv9869337.jpg"></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div id="my_exhibit" class="stuff_title">
+            <div><p>我的展品</p></div>
+        </div>
+        <div class="stuff_img_column">
+            <ul class="stuff_img_list">
+                {% for i in columns %}
+                <li>
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420918401&di=06dcc7d54c12e37570a38080164c57b7&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170524%2F6d2d409f4f514bbea71a004595d25309_th.jpg">
+                <div class="stuff_info">
+                    <div class="stuff_name"><p>今天天气真的好</p></div>
+                    <div class="stuff_price"><p>100¥</p></div>
+                    <div class="stuff_brand"><p>无数的时间</p></div>
+                </div>
+                </li>
+                {% endfor %}
+                {%  for i in columns1 %}
+                <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420997900&di=4a159c4404e38616bec4ed43c01a2863&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170809%2F5054-fyitapv9869337.jpg"></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div id="my_exhibit" class="stuff_title">
+            <div><p>我的库存</p></div>
+        </div>
+        <div class="stuff_img_column">
+            <ul class="stuff_img_list">
+                {% for i in columns %}
+                <li>
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420918401&di=06dcc7d54c12e37570a38080164c57b7&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170524%2F6d2d409f4f514bbea71a004595d25309_th.jpg">
+                <div class="stuff_info">
+                    <div class="stuff_name"><p>今天天气真的好</p></div>
+                    <div class="stuff_price"><p>100¥</p></div>
+                    <div class="stuff_brand"><p>无数的时间</p></div>
+                </div>
+                </li>
+                {% endfor %}
+                {%  for i in columns1 %}
+                <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420997900&di=4a159c4404e38616bec4ed43c01a2863&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170809%2F5054-fyitapv9869337.jpg"></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
