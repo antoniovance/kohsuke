@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xxxxx的详情页面</title>
+    <style>
+        #body{
+            background-color: #f2f2f2;
+        }
+
+        /* 标题头 */
+        #head_column{
+            height: 70px;
+            background-color: #fdfffd;
+            top: 0;
+            box-shadow: 2px 2px 3px #c7c7c7;
+            border-radius: 3px;
+            position: fixed;
+            width: 100%;
+        }
+
+        @font-face {
+            font-family: Wyue-GutiFangsong-NC;
+            src: url("{% static "Wyue-GutiFangsong-NC.otf" %}");
+            }
+
+        #head_title{
+            color: slategrey;
+            top: 50px;
+            padding-left: 50px;
+            padding-top: 20px;
+            font-size: 25px;
+            font-family: "Wyue-GutiFangsong-NC";
+        }
+
+        /* 主页部分 */
+
+        #main{
+            margin-left: 145px;
+            margin-right: 145px;
+            margin-top: 70px;
+            background-color: #fdfffd;
+        }
+
+        /* 主页分栏的标题 */
+
+        .account_title{
+            padding-top: 12px;
+            margin-left: 5%;
+            color: slategrey;
+            font-family: Wyue-GutiFangsong-NC;
+        }
+
+        .account_image_section{
+            margin-left: 50px;
+            width: 400px;
+        }
+
+        .account_image_section div img{
+            width: 400px;
+        }
+
+        .account_info_section{
+            margin-left: 50px;
+            margin-right: 50px;
+            color: slategrey;
+            font-size: small;
+        }
+
+    </style>
+</head>
+<body>
+<div id="body">
+    <div id="head_column">
+        <div id="head_title">{{ the_title }}</div>
+    </div>
+
+    <div id="main">
+        <div id="my_info" class="account_title">
+            <div><p>我的详情</p></div>
+        </div>
+
+        <div style="display: flex">
+            <div class="account_image_section">
+                <div>
+                    <img src="{{ account.head_image }}">
+                </div>
+            </div>
+            <div class="account_info_section">
+                <div>
+                    <div class="account_name"><p>用户昵称：{{ account.user_name }}</p></div>
+                    <div class="account_email"><p>用户邮箱：{{ account.email }}</p></div>
+                    <div class="account_phone"><p>用户电话：{{ stuff.phone }}$</p></div>
+                    <div class="account_intro">
+                        <p>这是用户的简介。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

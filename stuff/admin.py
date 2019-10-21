@@ -8,6 +8,7 @@ class StuffAdmin(admin.ModelAdmin):
         'name',
         'brand',
         'owner',
+        'image',
         'is_online',
         'is_delete',
         'acquire_price',

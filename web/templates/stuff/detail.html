@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xxxxx的详情页面</title>
+    <style>
+        #body{
+            background-color: #f2f2f2;
+        }
+
+        /* 标题头 */
+        #head_column{
+            height: 70px;
+            background-color: #fdfffd;
+            top: 0;
+            box-shadow: 2px 2px 3px #c7c7c7;
+            border-radius: 3px;
+            position: fixed;
+            width: 100%;
+        }
+
+        @font-face {
+            font-family: Wyue-GutiFangsong-NC;
+            src: url("{% static "Wyue-GutiFangsong-NC.otf" %}");
+            }
+
+        #head_title{
+            color: slategrey;
+            top: 50px;
+            padding-left: 50px;
+            padding-top: 20px;
+            font-size: 25px;
+            font-family: "Wyue-GutiFangsong-NC";
+        }
+
+        /* 主页部分 */
+
+        #main{
+            margin-left: 145px;
+            margin-right: 145px;
+            margin-top: 70px;
+            background-color: #fdfffd;
+        }
+
+        /* 主页分栏的标题 */
+
+        .stuff_title{
+            padding-top: 12px;
+            margin-left: 5%;
+            color: slategrey;
+            font-family: Wyue-GutiFangsong-NC;
+        }
+
+        .stuff_image_section{
+            margin-left: 50px;
+            width: 400px;
+        }
+
+        .stuff_image_section div img{
+            width: 400px;
+        }
+
+        .stuff_info_section{
+            margin-left: 50px;
+            margin-right: 50px;
+            color: slategrey;
+            font-size: small;
+        }
+
+        .stuff_owner{
+            display: flex;
+        }
+
+        .stuff_owner p{
+            margin-left: 50px;
+            font-size: medium;
+        }
+
+        .stuff_owner p img{
+            width: 120px;
+            height: 120px;
+            border-radius: 60px 60px 60px 60px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="body">
+    <div id="head_column">
+        <div id="head_title">{{ the_title }}</div>
+    </div>
+
+    <div id="main">
+        <div id="my_sales" class="stuff_title">
+            <div><p>我的货品</p></div>
+        </div>
+        
+        <div style="display: flex">
+            <div class="stuff_image_section">
+                <div>
+                    <img src="{{ stuff.image }}">
+                </div>
+            </div>
+            <div class="stuff_info_section">
+                <div>
+                    <div class="stuff_name"><p>物品名称：{{ stuff.name }}</p></div>
+                    <div class="stuff_brand_name"><p>物品品牌：{{ stuff.brand }}</p></div>
+                    <div class="stuff_acquire_price"><p>获得的价格：{{ stuff.acquire_price }}$</p></div>
+                    <div class="stuff_intro">
+                        <p>{{ stuff.intro }}</p>
+                    </div>
+                    <div class="stuff_owner">
+                        <p><img src="{{ stuff.owner_image }}"></p>
+                        <p>{{ stuff.owner_name }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+</body>
+</html>
