@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb9b624e-1e91-4e5c-a340-cc3087da046a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/serializer/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/serializer/account.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/serializer/stuff.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/account/detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/stuff/detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/account/detail.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kohsuke/settings.py" afterPath="$PROJECT_DIR$/kohsuke/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kohsuke/urls.py" afterPath="$PROJECT_DIR$/kohsuke/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuff/admin.py" afterPath="$PROJECT_DIR$/stuff/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/__init__.py" afterPath="$PROJECT_DIR$/web/views/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/account/__init__.py" afterPath="$PROJECT_DIR$/web/views/account/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/stuff/__init__.py" afterPath="$PROJECT_DIR$/web/views/stuff/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/stuff/detail.py" afterPath="$PROJECT_DIR$/web/views/stuff/detail.py" />
-    </list>
+    <list default="true" id="fb9b624e-1e91-4e5c-a340-cc3087da046a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,8 +74,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+            <state relative-caret-position="18">
+              <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -763,8 +744,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+        <state relative-caret-position="18">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding />
         </state>
       </provider>
