@@ -22,3 +22,15 @@ class StuffDetailSerializer(serializers.Serializer):
 
     def get_owner_image(self, obj):
         return obj.owner.head_image
+
+
+class StuffListSerializer(serializers.Serializer):
+
+    id = serializers.IntegerField()
+    name = serializers.CharField()
+    image = serializers.CharField()
+    acquire_price = serializers.CharField()
+    brand = serializers.SerializerMethodField()
+
+    def get_brand(self, obj):
+        return obj.brand.name

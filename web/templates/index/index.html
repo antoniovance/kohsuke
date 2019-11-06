@@ -37,8 +37,8 @@
         /* 主页部分 */
 
         #main{
-            margin-left: 145px;
-            margin-right: 145px;
+            margin-left: 105px;
+            margin-right: 105px;
             margin-top: 70px;
             background-color: #fdfffd;
         }
@@ -62,6 +62,7 @@
             display: flex;  /* 图片排列的真正奥义 */
             flex-direction: row;
             flex-wrap: wrap;
+            align-items: flex-start;
             list-style: none
         }
 
@@ -78,8 +79,16 @@
             background-color: #f2f2f2;
         }
 
-        .stuff_img_list li img{
+        .img_warp{
             width: 245px;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .img_warp img{
+            width: 150%;
+            margin-top: -15%;
+            margin-left: -15%;
         }
 
         .stuff_info{
@@ -113,18 +122,17 @@
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
-                {% for i in columns %}
+                {% for i in products %}
                 <li>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420918401&di=06dcc7d54c12e37570a38080164c57b7&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170524%2F6d2d409f4f514bbea71a004595d25309_th.jpg">
-                <div class="stuff_info">
-                    <div class="stuff_name"><p>今天天气真的好</p></div>
-                    <div class="stuff_price"><p>100¥</p></div>
-                    <div class="stuff_brand"><p>无数的时间</p></div>
-                </div>
+                    <a href="{% url "stuff_detail" i.id %}">
+                        <div class="img_warp"><img src="{{ i.image }}"></div>
+                    </a>
+                    <div class="stuff_info">
+                        <div class="stuff_name"><p>{{ i.name }}</p></div>
+                        <div class="stuff_price"><p>{{ i.acquire_price }}¥</p></div>
+                        <div class="stuff_brand"><p>{{ i.brand }}</p></div>
+                    </div>
                 </li>
-                {% endfor %}
-                {%  for i in columns1 %}
-                <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420997900&di=4a159c4404e38616bec4ed43c01a2863&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170809%2F5054-fyitapv9869337.jpg"></li>
                 {% endfor %}
             </ul>
         </div>
@@ -134,18 +142,17 @@
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
-                {% for i in columns %}
+                {% for i in exhibits %}
                 <li>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420918401&di=06dcc7d54c12e37570a38080164c57b7&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170524%2F6d2d409f4f514bbea71a004595d25309_th.jpg">
-                <div class="stuff_info">
-                    <div class="stuff_name"><p>今天天气真的好</p></div>
-                    <div class="stuff_price"><p>100¥</p></div>
-                    <div class="stuff_brand"><p>无数的时间</p></div>
-                </div>
+                    <a href="{% url "stuff_detail" i.id %}">
+                        <div class="img_warp"><img src="{{ i.image }}"></div>
+                    </a>
+                    <div class="stuff_info">
+                        <div class="stuff_name"><p>{{ i.name }}</p></div>
+                        <div class="stuff_price"><p>{{ i.acquire_price }}¥</p></div>
+                        <div class="stuff_brand"><p>{{ i.brand }}</p></div>
+                    </div>
                 </li>
-                {% endfor %}
-                {%  for i in columns1 %}
-                <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420997900&di=4a159c4404e38616bec4ed43c01a2863&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170809%2F5054-fyitapv9869337.jpg"></li>
                 {% endfor %}
             </ul>
         </div>
@@ -155,18 +162,17 @@
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
-                {% for i in columns %}
+                {% for i in storages %}
                 <li>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420918401&di=06dcc7d54c12e37570a38080164c57b7&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170524%2F6d2d409f4f514bbea71a004595d25309_th.jpg">
-                <div class="stuff_info">
-                    <div class="stuff_name"><p>今天天气真的好</p></div>
-                    <div class="stuff_price"><p>100¥</p></div>
-                    <div class="stuff_brand"><p>无数的时间</p></div>
-                </div>
+                    <a href="{% url "stuff_detail" i.id %}">
+                        <div class="img_warp"><img src="{{ i.image }}"></div>
+                    </a>
+                    <div class="stuff_info">
+                        <div class="stuff_name"><p>{{ i.name }}</p></div>
+                        <div class="stuff_price"><p>{{ i.acquire_price }}¥</p></div>
+                        <div class="stuff_brand"><p>{{ i.brand }}</p></div>
+                    </div>
                 </li>
-                {% endfor %}
-                {%  for i in columns1 %}
-                <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571420997900&di=4a159c4404e38616bec4ed43c01a2863&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170809%2F5054-fyitapv9869337.jpg"></li>
                 {% endfor %}
             </ul>
         </div>

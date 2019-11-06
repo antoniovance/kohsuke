@@ -2,4 +2,3 @@
 **/__pycache__
 *.xml
 *.sqlite3
-*.pyc
