@@ -13,6 +13,7 @@ class StuffDetailSerializer(serializers.Serializer):
     intro = serializers.CharField()
     owner_name = serializers.SerializerMethodField()
     owner_image = serializers.SerializerMethodField()
+    owner_id = serializers.SerializerMethodField()
 
     def get_brand(self, obj):
         return obj.brand.name
@@ -22,6 +23,9 @@ class StuffDetailSerializer(serializers.Serializer):
 
     def get_owner_image(self, obj):
         return obj.owner.head_image
+
+    def get_owner_id(self, obj):
+        return obj.owner.id
 
 
 class StuffListSerializer(serializers.Serializer):

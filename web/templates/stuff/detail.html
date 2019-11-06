@@ -72,15 +72,22 @@
             display: flex;
         }
 
+        .stuff_owner div{
+            margin-left: 50px;
+            font-size: medium;
+            width: 120px;
+            height: 120px;
+            border-radius: 180px 180px 180px 180px;
+            overflow: hidden;
+        }
+
         .stuff_owner p{
             margin-left: 50px;
             font-size: medium;
         }
 
-        .stuff_owner p img{
-            width: 120px;
-            height: 120px;
-            border-radius: 60px 60px 60px 60px;
+        .stuff_owner div img{
+            width: 200px;
         }
 
     </style>
@@ -111,7 +118,9 @@
                         <p>{{ stuff.intro }}</p>
                     </div>
                     <div class="stuff_owner">
-                        <p><img src="{{ stuff.owner_image }}"></p>
+                        <a href="{% url "account_detail" stuff.owner_id %}">
+                            <div><img src="{{ stuff.owner_image }}"></div>
+                        </a>
                         <p>{{ stuff.owner_name }}</p>
                     </div>
                 </div>
