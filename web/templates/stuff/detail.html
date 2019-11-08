@@ -41,6 +41,7 @@
             margin-right: 145px;
             margin-top: 70px;
             background-color: #fdfffd;
+            padding-bottom: 100px;
         }
 
         /* 主页分栏的标题 */
@@ -50,6 +51,10 @@
             margin-left: 5%;
             color: slategrey;
             font-family: Wyue-GutiFangsong-NC;
+        }
+
+        .stuff_section{
+            display: flex;
         }
 
         .stuff_image_section{
@@ -90,6 +95,10 @@
             width: 200px;
         }
 
+        #footer{
+            height: 50px;
+        }
+
     </style>
 </head>
 <body>
@@ -103,7 +112,7 @@
             <div><p>我的货品</p></div>
         </div>
         
-        <div style="display: flex">
+        <div class="stuff_section">
             <div class="stuff_image_section">
                 <div>
                     <img src="{{ stuff.image }}">
@@ -128,7 +137,8 @@
         </div>
         
     </div>
-    
+
+    <div id="footer"></div>
 </div>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <style>
         #body{
             background-color: #f2f2f2;
+            bottom: 0px;
         }
 
         /* 标题头 */
@@ -37,25 +38,37 @@
         /* 主页部分 */
 
         #main{
-            margin-left: 105px;
-            margin-right: 105px;
+            margin-left: 125px;
+            margin-right: 125px;
             margin-top: 70px;
             background-color: #fdfffd;
+            padding-left: 45px;
+            padding-right: 45px;
+            padding-bottom: 45px;
         }
 
         /* 主页分栏的标题 */
 
         .stuff_title{
-            padding-top: 12px;
-            margin-left: 5%;
+            height: 100px;
             color: slategrey;
             font-family: Wyue-GutiFangsong-NC;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .stuff_title div{
+            padding-top: 30px;
+        }
+
+        .stuff_title_more{
 
         }
 
 
         .stuff_img_column{
-            width: 99%;
+            /*width: 99%;*/
         }
 
         .stuff_img_list{
@@ -63,19 +76,24 @@
             flex-direction: row;
             flex-wrap: wrap;
             align-items: flex-start;
-            list-style: none
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+            justify-content: space-around;
         }
 
         .stuff_img_list li{
-            padding-top: 20px;
-            padding-left: 5px;
-            padding-bottom: 20px;
-            padding-right: 5px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-bottom: 0px;
+            padding-right: 0px;
+            margin-bottom: 15px;
         }
 
         /* 动画 */
         .stuff_img_list li:hover{
-            box-shadow: 2px 2px 3px #c7c7c7;
+            box-shadow: 3px 3px 4px #c7c7c7;
             background-color: #f2f2f2;
         }
 
@@ -108,6 +126,10 @@
             margin-bottom: 7px;
         }
 
+        #footer{
+            height: 50px;
+        }
+
     </style>
 </head>
 <body>
@@ -118,7 +140,8 @@
 
     <div id="main">
         <div id="my_sales" class="stuff_title">
-            <div><p>我的货品</p></div>
+            <div><p>我的货品|</p></div>
+            <div class="stuff_title_more"><p>more</p></div>
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
@@ -138,7 +161,8 @@
         </div>
 
         <div id="my_exhibit" class="stuff_title">
-            <div><p>我的展品</p></div>
+            <div><p>我的展品|</p></div>
+            <div class="stuff_title_more"><p>more</p></div>
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
@@ -158,7 +182,8 @@
         </div>
 
         <div id="my_exhibit" class="stuff_title">
-            <div><p>我的库存</p></div>
+            <div><p>我的库存|</p></div>
+            <div class="stuff_title_more"><p>more</p></div>
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
@@ -177,6 +202,8 @@
             </ul>
         </div>
     </div>
+
+    <div id="footer"></div>
 </div>
 </body>
 </html>
