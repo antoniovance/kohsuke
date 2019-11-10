@@ -1,5 +1,5 @@
 from django.contrib import admin
-from stuff.models import Stuff, Brand
+from stuff.models import Stuff, Brand, Category, StuffCategoryRelationship
 
 
 class StuffAdmin(admin.ModelAdmin):
@@ -15,7 +15,7 @@ class StuffAdmin(admin.ModelAdmin):
         'stock',
         'intro'
     ]
-    list_display = ('name', 'type')
+    list_display = ('id', 'name', 'type')
 
 
 admin.site.register(Stuff, StuffAdmin)
@@ -23,7 +23,23 @@ admin.site.register(Stuff, StuffAdmin)
 
 class BrandAdmin(admin.ModelAdmin):
     fields = ['name']
-    list_display = ('name',)
+    list_display = ('id', 'name')
 
 
 admin.site.register(Brand, BrandAdmin)
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    fields = ['name', 'stuffs']
+    list_display = ('id', 'name')
+
+
+admin.site.register(Category, CategoryAdmin)
+
+
+class StuffCategoryRelationshipAdmin(admin.ModelAdmin):
+    fields = []
+    list_display = ('id', 'stuff', 'category')
+
+
+admin.site.register(StuffCategoryRelationship, StuffCategoryRelationshipAdmin)

@@ -14,5 +14,5 @@ class StuffDetailView(generic.DetailView):
         data = StuffDetailSerializer(instance=self.object).data
         context = self.get_context_data(**kwargs)
         context['stuff'] = data
-        context['the_title'] = '旧物.'
+        context['the_title'] = '我的旧物.'
         return render(request=request, template_name=self.template_name, context=context)
