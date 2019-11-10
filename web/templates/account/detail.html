@@ -41,6 +41,7 @@
             margin-right: 145px;
             margin-top: 70px;
             background-color: #fdfffd;
+            padding-bottom: 100px;
         }
 
         /* 主页分栏的标题 */
@@ -69,7 +70,7 @@
         }
 
         #footer{
-            height: 45px;
+            height: 50px;
         }
 
     </style>
@@ -77,7 +78,7 @@
 <body>
 <div id="body">
     <div id="head_column">
-        <div id="head_title">{{ the_title }}</div>
+        <div id="head_title" onclick="window.location.href='{% url 'index' %}'">{{ the_title }}</div>
     </div>
 
     <div id="main">

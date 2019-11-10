@@ -63,7 +63,14 @@
         }
 
         .stuff_title_more{
-
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            color: slategrey;
+            font-size: 15px;
+            font-family: "Wyue-GutiFangsong-NC";
+            height: auto;
+            margin-right: 15px;
         }
 
 
@@ -135,13 +142,15 @@
 <body>
 <div id="body">
     <div id="head_column">
-        <div id="head_title">{{ the_title }}</div>
+        <div id="head_title" onclick="window.location.href='{% url 'index' %}'">{{ the_title }}</div>
     </div>
 
     <div id="main">
         <div id="my_sales" class="stuff_title">
-            <div><p>我的货品|</p></div>
-            <div class="stuff_title_more"><p>more</p></div>
+            <div><p>我的货品</p></div>
+        </div>
+        <div class="stuff_title_more">
+            <p>更多</p>
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
@@ -161,8 +170,10 @@
         </div>
 
         <div id="my_exhibit" class="stuff_title">
-            <div><p>我的展品|</p></div>
-            <div class="stuff_title_more"><p>more</p></div>
+            <div><p>我的展品</p></div>
+        </div>
+        <div class="stuff_title_more">
+            <p>更多</p>
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
@@ -182,8 +193,10 @@
         </div>
 
         <div id="my_exhibit" class="stuff_title">
-            <div><p>我的库存|</p></div>
-            <div class="stuff_title_more"><p>more</p></div>
+            <div><p>我的库存</p></div>
+        </div>
+        <div class="stuff_title_more">
+            <p>更多</p>
         </div>
         <div class="stuff_img_column">
             <ul class="stuff_img_list">
