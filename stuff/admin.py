@@ -30,7 +30,7 @@ admin.site.register(Brand, BrandAdmin)
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    fields = ['name', 'stuffs']
+    fields = ['name']
     list_display = ('id', 'name')
 
 
@@ -38,7 +38,7 @@ admin.site.register(Category, CategoryAdmin)
 
 
 class StuffCategoryRelationshipAdmin(admin.ModelAdmin):
-    fields = []
+    fields = ['stuff', 'category']
     list_display = ('id', 'stuff', 'category')
 
 
