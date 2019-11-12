@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'stuff',
     'web',
     'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
