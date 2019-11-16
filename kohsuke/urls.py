@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from web.views import Index, StuffDetailView, AccountDetailView, StuffMoreListView
-from api import urls
+from api import urls as api_urls
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,5 +26,5 @@ urlpatterns = [
     path('stuff/<int:pk>', StuffDetailView.as_view(), name='stuff_detail'),
     path('stuff/more/<int:type>', StuffMoreListView.as_view(), name='stuff_more'),
     path('account/<int:pk>', AccountDetailView.as_view(), name='account_detail'),
-    #path('api/', include(urls.urlpatterns)),
+    path('api/', include(api_urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

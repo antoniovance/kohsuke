@@ -1,12 +1,13 @@
-from django.shortcuts import render
-from rest_framework import views
-from rest_framework.response import responses
+# -*- coding:utf-8 -*-
+from rest_framework.generics import RetrieveAPIView
+from rest_framework.response import Response
+from stuff.models import Stuff
 
 # Create your views here.
 
 
-class StuffMoreApiView(views.APIView):
-    def get(self, request, **kwargs):
-        stuff = {}
+class StuffMoreApiView(RetrieveAPIView):
 
-        return responses(stuff)
+    def get(self, request, *args, **kwargs):
+        stuff_type = kwargs.get('type')
+        return Response({})
