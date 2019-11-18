@@ -7,6 +7,7 @@ from stuff.models import Stuff
 
 
 class StuffMoreApiView(RetrieveAPIView):
+    queryset = Stuff.objects.all()
 
     def get(self, request, *args, **kwargs):
         stuff_type = kwargs.get('type')
