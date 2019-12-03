@@ -1,2 +1,2 @@
 # -*- coding:utf-8 -*-
-from .stuff import StuffMoreApiSerialiser
+from .stuff import StuffMoreApiSerializer

@@ -2,7 +2,7 @@
 from rest_framework import serializers
 
 
-class StuffMoreApiSerialiser(serializers.Serializer):
+class StuffMoreApiSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField()
     image = serializers.CharField()
